@@ -8,6 +8,10 @@ namespace Mvc5.App.Data
 {
     public class BeersContext : DbContext
     {
+        public BeersContext() : base("DefaultConnection")
+        {
+        }
+
         public DbSet<Beer> Beers { get; set; }
     }
 
